@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JavaWeb201701</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 20190418 -->
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+ <filter>
+ <filter-name>AuthorityFilter</filter-name>
+ <filter-class>cn.edu.lingnan.filter.AuthorityFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ <filter-name>AuthorityFilter</filter-name>
+<url-pattern>/admin/*</url-pattern>
+ </filter-mapping>
+ <servlet>
+  <servlet-name>loginOutServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.loginOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>loginOutServlet</servlet-name>
+  <url-pattern>/loginout</url-pattern>
+  </servlet-mapping>
+ 
+  <!-- 20190509 -->
+  <servlet>
+  <servlet-name>AllFownerServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AllFownerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AllFownerServlet</servlet-name>
+  <url-pattern>/admin/fowner</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 20190514 -->
+  <servlet>
+  <servlet-name>UdateFowServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UdateFowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UdateFowServlet</servlet-name>
+  <url-pattern>/admin/updateFow</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 20190516 -->
+  <servlet>
+  <servlet-name>DeleteFowServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.DeleteFowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DeleteFowServlet</servlet-name>
+  <url-pattern>/admin/deleteFow</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 20190523 -->
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 20190523 -->
+  <servlet>
+  <servlet-name>AddcusServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AddcusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AddcusServlet</servlet-name>
+  <url-pattern>/admin/addcus</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 20190523 -->
+  <servlet>
+  <servlet-name>AddfowServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AddfowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AddfowServlet</servlet-name>
+  <url-pattern>/admin/addfow</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 20190523 -->
+  <servlet>
+  <servlet-name>Reg1Servlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.Reg1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Reg1Servlet</servlet-name>
+  <url-pattern>/register1</url-pattern>
+  </servlet-mapping>
+ 
+     <!-- 20190523 -->
+  <servlet>
+  <servlet-name>AddhServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AddhServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AddhServlet</servlet-name>
+  <url-pattern>/admin/addhouse</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 20190530 -->
+  <jsp-config>
+       <taglib>
+       <taglib-uri>/testtag</taglib-uri>
+       <taglib-location>/WEB-INF/tlds/testtag.tld</taglib-location>
+       </taglib>
+     <!-- 20190604 -->
+       <taglib>
+       <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+       <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+       </taglib> 
+       <taglib>
+       <taglib-uri>http://java.sun.com/jsp/jstl/sql</taglib-uri>
+       <taglib-location>/WEB-INF/tlds/sql.tld</taglib-location>
+       </taglib>
+  </jsp-config>
+  
+   <!-- 20190606 -->
+  <servlet>
+  <servlet-name>NameCheckServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.NameCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NameCheckServlet</servlet-name>
+  <url-pattern>/nameCheckServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 20190611 -->
+  <servlet>
+  <servlet-name>AllHouseServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AllHouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AllHouseServlet</servlet-name>
+  <url-pattern>/admin/findAllHouse</url-pattern>
+  </servlet-mapping>
+ 
+  <!-- 20190615 -->
+  <servlet>
+  <servlet-name>Allh3Servlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.Allh3Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Allh3Servlet</servlet-name>
+  <url-pattern>/fowner/allh3</url-pattern>
+  </servlet-mapping>
+ 
+  
+   <!-- 20190611 -->
+  <servlet>
+  <servlet-name>AllCustomerServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.AllCustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AllCustomerServlet</servlet-name>
+  <url-pattern>/admin/findAllCutomer</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 20190611 -->
+  <servlet>
+  <servlet-name>UpdateHouseServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UpdateHouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdateHouseServlet</servlet-name>
+  <url-pattern>/admin/updateHouse</url-pattern>
+  </servlet-mapping>
+ 
+  <!-- 20190611 -->
+  <servlet>
+  <servlet-name>UpdateCusServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UpdateCusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdateCusServlet</servlet-name>
+  <url-pattern>/admin/updatecus</url-pattern>
+  </servlet-mapping>
+  
+ 
+    <!-- 20190615 -->
+  <servlet>
+  <servlet-name>UdcusServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UdcusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UdcusServlet</servlet-name>
+  <url-pattern>/fowner/udcus</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 20190615 -->
+  <servlet>
+  <servlet-name>UdfowServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UdfowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UdfowServlet</servlet-name>
+  <url-pattern>/fowner/udfow</url-pattern>
+  </servlet-mapping>
+  
+
+</web-app>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/css1.css">
+<link rel="stylesheet" href="src/jquery.skidder.css">
+
+
+</head>
+<body style="overflow:-Scroll;overflow-x:hidden;background: #FFFFFF;">
+<header>
+	<div style="width: 100%;height: 100px;">
+	<div ><img src="IMG/111.jpg" width="15%" height="90px"></div>
+<div style="float: right;margin-top:-90px;margin-right: 50px;"> 
+	<div id="SS"><div id="rr"></div><div ><a href="../register.jsp"><p style="color:#666666">注册</p></a></div></div>
+	<div id="AB"><div id="rr"></div><div><a href="../loginout"><p style="color:#666666">注销</p></a></div></div>
+</div>
+    </div>
+</header>
+	<nav><a href="#" id="header"></a>
+		<ul id="menu">
+			<li>Home</li>
+			<li id="mm"><a href="../fowner/ff/fowner.jsp" target="_blank" style="color:  #D5D6E2;">房东界面</a> 
+             <ul id="sub">
+				<li><a href="../fowner/allh3"  style="color:  #D5D6E2;">查看房子信息</a> </li>
+				<li><a href="../register.jsp"  style="color:  #D5D6E2;">注册新用户</a> </li>
+				<li><a href="../fowner/ff/fowner.jsp" target="_blank" style="color:  #D5D6E2;">...</a></li>
+			  </ul>
+			</li>			
+			<li id="mm"><a href="../fowner/ff/customer.jsp" target="_blank" style="color:  #D5D6E2;">租客界面</a> 
+              <ul id="sub">
+				<li><a href="../fowner/allh3"   style="color:  #D5D6E2;">查看房子信息</a></li>
+				<li><a href="../reg1.jsp"  style="color:  #D5D6E2;">注册新用户</a> </li>
+				<li><a href="../fowner/ff/customer.jsp" target="_blank" style="color:  #D5D6E2;">...</a></li>
+			  </ul>
+			</li>
+			<li id="mm"><a href="../admin/admin.jsp" target="_blank" style="color:  #D5D6E2;">管理员界面</a> 
+			<ul id="sub">
+				<li><a href="../admin/findAllHouse"  style="color:#D5D6E2;">查看房子信息</a></li>
+				<li><a href="../admin/fowner"  style="color: #D5D6E2;">查看房东信息</a> </li>
+				<li><a href="../admin/findAllCutomer"  style="color: #D5D6E2;">查看租客信息</a> </li>
+				<li><a href="../admin/admin.jsp" target="_blank"  style="color: #D5D6E2;">添加...</a></li>
+			  </ul></li>
+		</ul>
+	</nav>
+<div class="slideshow" style="height: 0; margin-top:20px;overflow: hidden">
+	<div class="slide"><img src="IMG/2.jpg"></div>
+	  <div class="slide"><img src="IMG/3.jpg"></div>
+	  <div class="slide"><img src="IMG/4.jpg"></div>
+	  <div class="slide"><img src="IMG/5.jpg"></div>
+	  <div class="slide"><img src="IMG/hui.jpg"></div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/smartresize.js"></script>
+<script src="src/jquery.skidder.js"></script>
+<script type="text/javascript">
+	$('.slideshow').each( function() {
+		  var $slideshow = $(this);
+		  $slideshow.imagesLoaded( function() {
+			$slideshow.skidder({
+			  slideClass    : '.slide',
+			  animationType : 'css',
+			  scaleSlides   : true,
+			  maxWidth : 1300,
+			  maxHeight: 500,
+			  paging        : true,
+			  autoPaging    : true,
+			  pagingWrapper : ".skidder-pager",
+			  pagingElement : ".skidder-pager-dot",
+			  swiping       : true,
+			  leftaligned   : false,
+			  cycle         : true,
+			  jumpback      : false,
+			  speed         : 400,
+			  autoplay      : false,
+			  autoplayResume: false,
+			  interval      : 4000,
+			  transition    : "slide",
+			  afterSliding  : function() {},
+			  afterInit     : function() {}
+			});
+		  });
+	});
+	
+	$(window).smartresize(function(){
+		  $('.slideshow').skidder('resize');
+	});
+</script>
+
+
+
+<div class="big">
+<div id="LE">
+	<div><p style="font-size:23px;font-family:书法;color:  #999999;">
+		<a href="../fowner/allh3" target="_blank" style="color:  #999999;">最受欢迎推荐</a></p></div>
+	<div id="le"> </div>
+</div>
+	
+	<div class="small">
+	<div class="two" style="float: left;">
+         <div style="width:100% height:200px"><img src="IMG/3.jpg" width="100%" height="200px"" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666" >
+		<p>地址：湛江霞山绿塘路9号-hA01</p>
+		<br><p>租金：5000</p>
+	</div>
+	</div>
+	
+	<div class="three">
+		<div >
+		<div style="width:100% height:200px;">
+		<img src="IMG/4.jpg" width="100%" height="200px" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666">
+		<p>地址：湛江霞山鼎盛-hA02</p>
+		<br><p>租金：12000</p>
+	</div>
+</div>
+</div>
+	<div class="four">
+		<div>
+		<div style="width:100% height:200px;"><img src="IMG/9.jpg" width="100%" height="200px" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666">
+		<p>地址：湛江霞山绿塘路11号-hB01</p>
+		<br><p>租金：6000</p></div>
+	</div>
+</div>	
+</div>
+</div>
+
+
+<div class="big">
+<div id="LE">
+	<div><p style="font-size:23px;font-family:书法;color:  #999999;">
+		<a href="../fowner/allh3" target="_blank" style="color:  #999999;">新房子推荐</a></p></div>
+	<div id="le"> </div>
+</div>
+	
+	<div class="small">
+	<div class="two" style="float: left;">
+         <div style="width:100% height:200px">
+         <a href="../fowner/allh3" target="_blank" style="color: #999999;">
+         <img src="IMG/6.jpg" width="100%" height="200px"" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666">
+		<p>地址：湛江霞山绿塘路10号-hC01</p>
+		<br><p>租金：7000</p>
+	</div>
+	</div>
+	
+	<div class="three">
+		<div >
+		<div style="width:100% height:200px">
+		<a href="../fowner/allh3" target="_blank" style="color: #999999;">
+		<img src="IMG/5.jpg" width="100%" height="200px" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666">
+		<p>地址：湛江赤坎区跃进路18号-hC02</p>
+		<br><p>租金：6000</p>
+	</div>
+</div>
+</div>
+	<div class="four">
+		<div>
+		<div style="width:100% height:200px">
+		<a href="../fowner/allh3" target="_blank" style="color: #999999;">
+		<img src="IMG/8.jpg" width="100%" height="200px" style="border-radius: 27px"></div>
+		<div style="width:100%; height:100px ;font-family:楷书; font-size:100%;color:#666666">
+		<p>地址：湛江赤坎区寸金路9号-hC03</p>
+		<br><p>租金：5000</p></div>
+	</div>
+</div>	
+</div>
+</div>
+
+<footer>
+	
+ <div id="FI">
+    <div id="EE"><b><p style="color: black;">
+    <a href="shouye.html" style="color: black;"> 资源分享</a></p></b>
+      	<br ><p style="line-height: 3px;color: #666666;font-size: 100%">微信关注公众号</p>
+      	<br><p style="line-height: 3px;color:  #666666;font-size: 100%">或者搜索阳光租赁管理</p> </div>
+   <div id="II"><img src="IMG/tubiao.png" width="30%" height="90px">
+ 	</div>
+	<div id="EF"><b><p ><a href="shouye.html" style="color: black;"> 有关我们</a></p></b>
+		<br><p style="line-height: 3px;color: #666666;">房屋出租</p>
+		<br><p style="line-height: 3px;color: #666666;">房屋转卖</p>
+	</div>
+	<div id="ah">
+<a href="#header">
+		<aside>
+			<hr>
+			<hr>
+			<hr>
+		</aside>
+	</a>
+</div>
+ </div>
+</footer>
+<div class="ft">
+	<div id="ll"> </div>
+	<div ><p style="font-size: 100%">本站所有所有资源都来着互联网，如侵犯到您的权益请致函，我们会及时处理。</p></div>
+</div>
+
+</body>
+</html>

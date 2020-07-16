@@ -1,0 +1,138 @@
+/*VISIBLE AREA*/
+.skidder-viewport {
+  position: relative;
+	overflow: hidden;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/*SLIDES CONTAINER*/
+.skidder-viewport .skidder-wrapper {
+  width: 20000em;
+  position: absolute;
+  z-index: 1;
+}
+
+/*SLIDES*/
+/*inactive style*/
+.skidder-viewport .skidder-wrapper .skidder-slide {
+  float: left;
+  position: relative;
+  z-index: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.skidder-viewport.skidder-fade .skidder-wrapper {
+  width: auto;
+  margin: 0 auto;
+}
+
+.skidder-viewport.skidder-fade .skidder-wrapper .skidder-slide {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+/*active style*/
+.skidder-viewport .skidder-wrapper .skidder-slide.active,
+.skidder-viewport .skidder-wrapper .skidder-slide.disengage {
+  opacity: 1;
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+/*CLICKABLE AREA FOR LEFT-RIGHT MOVEMENT*/
+.skidder-viewport .skidder-clickwrapper {
+  position: absolute;
+  width: 50%; /* reduce width if you want a clickable image area */
+  height: 100%;
+  z-index: 4;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.skidder-viewport .skidder-prevwrapper {
+  left: 0;
+}
+.skidder-viewport .skidder-nextwrapper {
+  right: 0;
+}
+
+/*LEFT-RIGHT ICONS*/
+.skidder-viewport .skidder-clickwrapper .skidder-clickelement {
+  position: relative;
+  height: 100%;
+  width: 86px;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.skidder-viewport .skidder-clickwrapper:hover .skidder-clickelement {
+  opacity: 1;
+}
+.skidder-viewport .skidder-clickwrapper .skidder-prev {
+  float: left;
+  margin-left: 10px;
+  background-image: url('./images/slide_left.png');
+}
+.skidder-viewport .skidder-clickwrapper .skidder-next {
+  float: right;
+  margin-right: 10px;
+  background-image: url('./images/slide_right.png');
+}
+.skidder-viewport .skidder-clickwrapper .skidder-next.jumpback {
+  background-image: url('./images/slide_left.png');
+}
+
+/*TOUCHWRAPPER*/
+.skidder-viewport .skidder-touchwrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/*PAGING*/
+.skidder-viewport .skidder-pager {
+  display: table;
+  position: relative;
+  top: 92%;
+  margin: 0 auto;
+  z-index: 4;
+  padding: 0 0 15px 0;
+}
+
+.skidder-viewport .skidder-pager .skidder-pager-dot {
+  display: table-cell;
+  box-sizing: border-box;
+  cursor: pointer;
+  float: left;
+  /*weström style*/
+  height: 12px;
+  width: 12px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  text-decoration: none;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,0.1), 0 0 4px 2px rgba(0,0,0,0.1) inset;
+}
+.skidder-viewport .skidder-pager .skidder-pager-dot:last-child {
+  margin-right: 0;
+}
+.skidder-viewport .skidder-pager .skidder-pager-dot:hover,
+.skidder-viewport .skidder-pager .skidder-pager-dot.active {
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,0.1);
+}
+.skidder-viewport:hover .skidder-pager .skidder-pager-dot {
+  opacity: 1;
+}
+

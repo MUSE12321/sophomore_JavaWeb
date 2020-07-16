@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="datasource">
+     <xs:complexType>
+          <xs:sequence>
+           <xs:element name="driver" type="xs:string"/>
+           <xs:element name="url" type="xs:string"/>
+           <xs:element name="user" type="xs:string"/>
+           <xs:element name="password" type="xs:string"/>
+         </xs:sequence>
+     </xs:complexType>
+ </xs:element>
+</xs:schema>
